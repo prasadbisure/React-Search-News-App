@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot for Landing component should render snapshot with default props 1`] = `
+<div>
+  <h1>
+    News Lister
+  </h1>
+  <ForwardRef(SearchInput)
+    handleInputChange={[MockFunction]}
+  />
+  <SearchKeyword
+    data={Array []}
+    handleKeywordClick={[MockFunction]}
+  />
+  <Button
+    onHandleClick={[MockFunction]}
+  >
+    Search
+  </Button>
+</div>
+`;

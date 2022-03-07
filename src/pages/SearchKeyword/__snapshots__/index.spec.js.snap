@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchKeyword component should render snapshots properly 1`] = `
+<div
+  className="dropdown-container"
+>
+  <ul>
+    <li
+      key="0"
+    >
+      Test
+    </li>
+    <li
+      key="1"
+    >
+      Test2
+    </li>
+  </ul>
+</div>
+`;

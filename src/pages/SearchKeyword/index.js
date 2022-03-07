@@ -4,7 +4,7 @@ const SearchKeyword = ({data, handleKeywordClick}) => (
     <div className="dropdown-container">
         <ul>
             {data.map(keyword => (
-                <li onClick={() => handleKeywordClick(keyword.webTitle)}>{keyword.webTitle}</li>
+                <li key={keyword.id} onClick={handleKeywordClick(keyword.webTitle)}>{keyword.webTitle}</li>
             ))}
         </ul>
     </div>

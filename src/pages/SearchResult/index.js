@@ -1,4 +1,4 @@
-import useSearchHooks from "./hooks";
+import  useSearchHooks  from "./hooks";
 import './styles.css';
 import ReactPaginate from 'react-paginate';
 
@@ -7,13 +7,13 @@ const SearchResult = () => {
     return (
         <div className="wrapper">
             {isSearchData && (searchResult.map(item => (
-                <div className="thumbnail-wrapper">
-                <div className="thumb-img" style={{ backgroundImage: `url(${item.fields.thumbnail})`}}></div>
-                <div className="thumb-content">
-                    <a href={item.webUrl} rel="noopener noreferrer" target="_blank"><h2>{item.fields.headline}</h2></a>  
-                    <div className="tags">
+                <div key={item.id} className="thumbnail-wrapper">
+                <div key={item.id} className="thumb-img" style={{ backgroundImage: `url(${item.fields.thumbnail})`}}></div>
+                <div key={item.id} className="thumb-content">
+                    <a key={item.id} href={item.webUrl} rel="noopener noreferrer" target="_blank"><h2>{item.fields.headline}</h2></a>  
+                    <div key={item.id} className="tags">
                         {item.tags.map(tag=>(
-                            <span onClick={()=> handleTagKeywordClick(tag.webTitle)}>{tag.webTitle}</span>
+                            <span key={item.id} onClick={handleTagKeywordClick(tag.webTitle)}>{tag.webTitle}</span>
                         ))}
                     </div>  
                 </div>

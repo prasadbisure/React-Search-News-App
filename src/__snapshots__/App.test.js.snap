@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchKeyword component should render snapshots properly 1`] = `
+<div
+  className="App"
+>
+  <BrowserRouter>
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/search"
+      />
+      <Route
+        component={[Function]}
+        path="/"
+      />
+    </Switch>
+  </BrowserRouter>
+</div>
+`;

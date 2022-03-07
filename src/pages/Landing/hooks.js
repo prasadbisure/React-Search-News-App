@@ -4,23 +4,22 @@ import { fetchSearchKeywords } from '../../services';
 
 const useHooks = () => {
     const [searchValue, setSearchValue] = useState('');
-    const [searchResult, setSearchResult] = useState({});
+    const [searchResult, setSearchResult] = useState([]);
     let history = useHistory();
 
     const handleInputChange = (e) => {
         setSearchValue(e.target.value);       
     };
 
-    useEffect(()=>{
-        let delay = setTimeout(()=>{
-            if(searchValue){
+    useEffect(()=> {
+        let delay = setTimeout(()=> {
                 fetchSearchKeywords(searchValue).then(res=>{
                     setSearchResult(res?.data?.response?.results)
                 })
-            }
+            
         }, 1000)
         return () => clearTimeout(delay);
-    },[searchValue])
+    },[searchResult, searchValue])
     
     const onHandleClick = () => {
         history.push({
@@ -29,7 +28,7 @@ const useHooks = () => {
         });   
       };
 
-    const handleKeywordClick = (param) => {
+    const handleKeywordClick = (param) => () => {
         setSearchValue(param);
         history.push({
             pathname: '/search',
@@ -37,7 +36,7 @@ const useHooks = () => {
         }); 
     }
 
-    return{
+    return {
         searchValue,
         searchResult: Array.from(searchResult),
         handleInputChange,

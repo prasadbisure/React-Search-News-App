@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResult component should render snapshots when searchData found 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="thumbnail-wrapper"
+    key="123"
+  >
+    <div
+      className="thumb-img"
+      key="123"
+      style={
+        Object {
+          "backgroundImage": "url(undefined)",
+        }
+      }
+    />
+    <div
+      className="thumb-content"
+      key="123"
+    >
+      <a
+        href="http://"
+        key="123"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <h2 />
+      </a>
+      <div
+        className="tags"
+        key="123"
+      >
+        <span
+          key="123"
+        >
+          Web title
+        </span>
+      </div>
+    </div>
+  </div>
+  <PaginationBoxView
+    activeClassName="selected"
+    breakLabel="..."
+    className="pagination-container"
+    disableInitialCallback={false}
+    disabledClassName="disabled"
+    eventListener="onClick"
+    hrefAllControls={false}
+    marginPagesDisplayed={1}
+    nextAriaLabel="Next page"
+    nextClassName="next"
+    nextLabel=">"
+    nextPageRel="next"
+    nextRel="next"
+    onPageChange={[MockFunction]}
+    pageClassName="pagination-item"
+    pageCount={100}
+    pageLabelBuilder={[Function]}
+    pageRangeDisplayed={5}
+    prevPageRel="prev"
+    prevRel="prev"
+    previousAriaLabel="Previous page"
+    previousClassName="previous"
+    previousLabel="<"
+    selectedPageRel="canonical"
+  />
+</div>
+`;
+
+exports[`SearchResult component should render snapshots when searchData not found 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="no-result"
+  >
+    <p>
+      No result found 
+    </p>
+    <p>
+      <a
+        href="/"
+      >
+        Click here
+      </a>
+       to search again.
+    </p>
+  </div>
+</div>
+`;
